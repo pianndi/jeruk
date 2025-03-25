@@ -16,579 +16,24 @@
   <meta property="twitter:url" content="https://pianndi.github.io/jeruk/">
   <meta name="twitter:title" content="Hai, Namaku Jeruk! 😸">
   <meta name="twitter:description" content="Aku telah terkurung begitu lama dalam kotak ini, sendirian di dalam gelap.">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: white;
-      /* height: 100vh;
-      height: 100dvh;
-      display: flex;
-      justify-content: center;
-      align-items: center; */
-      font-family: Arial, Helvetica, sans-serif;
-      position: relative;
-    }
-
-    .loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgb(250, 175, 36);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999999;
-    }
-
-    progress {
-      height: 2rem;
-      width: 50%;
-    }
-
-    .hCqOlD {
-      -webkit-animation: hCClNo 0.3s ease-in;
-      animation: hCClNo 0.3s ease-in;
-      -webkit-transform: scale3d(0.6, 0.5, 0.6);
-      -ms-transform: scale3d(0.6, 0.5, 0.6);
-      transform: scale3d(0.6, 0.5, 0.6);
-    }
-
-    .hCqOlD div {
-      box-sizing: border-box;
-    }
-
-    /* sc-component-id: sc-bwzfXH */
-    .biqWkE {
-      width: 300px;
-      height: 300px;
-      margin: 150px auto;
-      -webkit-perspective: 1500px;
-      -moz-perspective: 1500px;
-      -ms-perspective: 1500px;
-      perspective: 1500px;
-      -webkit-animation: cRMhPG 0.7s;
-      animation: cRMhPG 0.7s;
-      -webkit-animation-delay: 0.3s;
-      animation-delay: 0.3s;
-    }
-
-    /* sc-component-id: sc-htpNat */
-    .kGQype {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      -webkit-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      -webkit-transform: rotate3d(1, 0, 0, -23deg) rotate3d(0, 1, 0, 50deg) translate3D(150px, 100px, -150px);
-      -ms-transform: rotate3d(1, 0, 0, -23deg) rotate3d(0, 1, 0, 50deg) translate3D(150px, 100px, -150px);
-      transform: rotate3d(1, 0, 0, -23deg) rotate3d(0, 1, 0, 50deg) translate3D(150px, 100px, -150px);
-    }
-
-    /* sc-component-id: sc-bxivhb */
-
-    /* fragile label*/
-    .kLAltZ {
-      position: absolute;
-      font-size: 30px;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to left, #f1e767 0%, #feb645 100%);
-      background: url("https://i.imgur.com/fkgSnbL.png8"),
-        linear-gradient(to left, #f1e767 0%, #feb645 100%);
-      background-repeat: no-repeat;
-      background-size: 100px, auto;
-      background-position: 10% 80%;
-      -webkit-transform: translate3d(0, 0, 150px);
-      -ms-transform: translate3d(0, 0, 150px);
-      transform: translate3d(0, 0, 150px);
-    }
-
-    /* sc-component-id: sc-EHOje */
-    .gvPWuP {
-      position: absolute;
-      font-size: 30px;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to left, #f1e767 0%, #feb645 100%);
-      background: linear-gradient(45deg,
-          #020201 0%,
-          #7c5620 50%,
-          #8e6425 51%,
-          #f6d55a 100%);
-      -webkit-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 150px);
-      -ms-transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 150px);
-      transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 150px);
-    }
-
-    /* sc-component-id: sc-bZQynM */
-    .ldKBkL {
-      position: absolute;
-      font-size: 30px;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to left, #f1e767 0%, #feb645 100%);
-      -webkit-transform: rotate3d(0, 1, 0, -90deg) translate3d(0, 0, 150px);
-      -ms-transform: rotate3d(0, 1, 0, -90deg) translate3d(0, 0, 150px);
-      transform: rotate3d(0, 1, 0, -90deg) translate3d(0, 0, 150px);
-    }
-
-    /* sc-component-id: sc-gzVnrw */
-    .fFMyeM {
-      position: absolute;
-      font-size: 30px;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to left, #f1e767 0%, #feb645 100%);
-      -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 150px);
-      -ms-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 150px);
-      transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 150px);
-      background: linear-gradient(to left, #0a0a0a 0%, #7a551f 1%, #feb645 100%);
-    }
-
-    /* sc-component-id: sc-htoDjs */
-    .crPZsS {
-      position: absolute;
-      font-size: 30px;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to left, #f1e767 0%, #feb645 100%);
-      -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 150px);
-      -ms-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 150px);
-      transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 150px);
-    }
-
-    /* sc-component-id: sc-dnqmqq */
-    .ZEDDw {
-      position: absolute;
-      font-size: 30px;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to left, #f1e767 0%, #feb645 100%);
-      -webkit-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      background: transparent;
-      border: none;
-      -webkit-transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, 150px);
-      -ms-transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, 150px);
-      transform: rotate3d(1, 0, 0, 90deg) translate3d(0, 0, 150px);
-    }
-
-    /* sc-component-id: sc-iwsKbI */
-    .ekMwXW {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      background-color: #f1e767;
-      border: 1px solid #888;
-      background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
-      -webkit-animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      -webkit-transform-origin: left center;
-      -ms-transform-origin: left center;
-      transform-origin: left center;
-    }
-
-    /* sc-component-id: sc-gZMcBi */
-    .fujrhZ {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      background-color: #f1e767;
-      border: 1px solid #888;
-      background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
-      -webkit-animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      right: 0;
-      -webkit-animation-name: iusdTg;
-      animation-name: iusdTg;
-      -webkit-transform-origin: right center;
-      -ms-transform-origin: right center;
-      transform-origin: right center;
-    }
-
-    /* sc-component-id: sc-gqjmRU */
-    .jRAgJu {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      background-color: #f1e767;
-      border: 1px solid #888;
-      background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
-      -webkit-animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      width: 100%;
-      height: 50%;
-      -webkit-animation-name: leamKW;
-      animation-name: leamKW;
-      -webkit-transform-origin: center top;
-      -ms-transform-origin: center top;
-      transform-origin: center top;
-    }
-
-    /* sc-component-id: sc-VigVT */
-    .gpuqLL {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      background-color: #f1e767;
-      border: 1px solid #888;
-      background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
-      -webkit-animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      animation: htGdjh 1s ease-in-out 0.5s 1 normal forwards;
-      bottom: 0;
-      width: 100%;
-      height: 50%;
-      -webkit-animation-name: diPYIz;
-      animation-name: diPYIz;
-      -webkit-transform-origin: center bottom;
-      -ms-transform-origin: center bottom;
-      transform-origin: center bottom;
-    }
-
-    /* sc-component-id: sc-keyframes-hCClNo */
-    @-webkit-keyframes hCClNo {
-      0% {
-        -webkit-transform: translate3d(0, -195px, 0) scale3d(0.5, 0.5, 0.5);
-        -ms-transform: translate3d(0, -195px, 0) scale3d(0.5, 0.5, 0.5);
-        transform: translate3d(0, -195px, 0) scale3d(0.5, 0.5, 0.5);
-      }
-
-      100% {
-        -webkit-transform: translate3d(0) scale3d(0.6, 0.5, 0.6);
-        -ms-transform: translate3d(0) scale3d(0.6, 0.5, 0.6);
-        transform: translate3d(0) scale3d(0.6, 0.5, 0.6);
-      }
-    }
-
-    @keyframes hCClNo {
-      0% {
-        -webkit-transform: translate3d(0, -195px, 0) scale3d(0.5, 0.5, 0.5);
-        -ms-transform: translate3d(0, -195px, 0) scale3d(0.5, 0.5, 0.5);
-        transform: translate3d(0, -195px, 0) scale3d(0.5, 0.5, 0.5);
-      }
-
-      100% {
-        -webkit-transform: translate3d(0) scale3d(0.6, 0.5, 0.6);
-        -ms-transform: translate3d(0) scale3d(0.6, 0.5, 0.6);
-        transform: translate3d(0) scale3d(0.6, 0.5, 0.6);
-      }
-    }
-
-    /* sc-component-id: sc-keyframes-cRMhPG */
-    @-webkit-keyframes cRMhPG {
-      0% {
-        -webkit-transform: scale3d(1, 1, 1);
-        -ms-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-      }
-
-      30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        -ms-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
-      }
-
-      40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        -ms-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-      }
-
-      75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        -ms-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
-      }
-
-      100% {
-        -webkit-transform: scale3d(1, 1, 1);
-        -ms-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-      }
-    }
-
-    @keyframes cRMhPG {
-      0% {
-        -webkit-transform: scale3d(1, 1, 1);
-        -ms-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-      }
-
-      30% {
-        -webkit-transform: scale3d(1.25, 0.75, 1);
-        -ms-transform: scale3d(1.25, 0.75, 1);
-        transform: scale3d(1.25, 0.75, 1);
-      }
-
-      40% {
-        -webkit-transform: scale3d(0.75, 1.25, 1);
-        -ms-transform: scale3d(0.75, 1.25, 1);
-        transform: scale3d(0.75, 1.25, 1);
-      }
-
-      75% {
-        -webkit-transform: scale3d(1.05, 0.95, 1);
-        -ms-transform: scale3d(1.05, 0.95, 1);
-        transform: scale3d(1.05, 0.95, 1);
-      }
-
-      100% {
-        -webkit-transform: scale3d(1, 1, 1);
-        -ms-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-      }
-    }
-
-    /* sc-component-id: sc-keyframes-htGdjh */
-    @-webkit-keyframes htGdjh {
-      from {
-        -webkit-transform: rotate3d(0, 1, 0, 0deg);
-        -ms-transform: rotate3d(0, 1, 0, 0deg);
-        transform: rotate3d(0, 1, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(0, 1, 0, -190deg);
-        -ms-transform: rotate3d(0, 1, 0, -190deg);
-        transform: rotate3d(0, 1, 0, -190deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(0, 1, 0, -150deg);
-        -ms-transform: rotate3d(0, 1, 0, -150deg);
-        transform: rotate3d(0, 1, 0, -150deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(0, 1, 0, -190deg);
-        -ms-transform: rotate3d(0, 1, 0, -190deg);
-        transform: rotate3d(0, 1, 0, -190deg);
-      }
-    }
-
-    @keyframes htGdjh {
-      from {
-        -webkit-transform: rotate3d(0, 1, 0, 0deg);
-        -ms-transform: rotate3d(0, 1, 0, 0deg);
-        transform: rotate3d(0, 1, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(0, 1, 0, -190deg);
-        -ms-transform: rotate3d(0, 1, 0, -190deg);
-        transform: rotate3d(0, 1, 0, -190deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(0, 1, 0, -150deg);
-        -ms-transform: rotate3d(0, 1, 0, -150deg);
-        transform: rotate3d(0, 1, 0, -150deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(0, 1, 0, -190deg);
-        -ms-transform: rotate3d(0, 1, 0, -190deg);
-        transform: rotate3d(0, 1, 0, -190deg);
-      }
-    }
-
-    /* sc-component-id: sc-keyframes-iusdTg */
-    @-webkit-keyframes iusdTg {
-      from {
-        -webkit-transform: rotate3d(0, 1, 0, 0deg);
-        -ms-transform: rotate3d(0, 1, 0, 0deg);
-        transform: rotate3d(0, 1, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(0, 1, 0, 170deg);
-        -ms-transform: rotate3d(0, 1, 0, 170deg);
-        transform: rotate3d(0, 1, 0, 170deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(0, 1, 0, 100deg);
-        -ms-transform: rotate3d(0, 1, 0, 100deg);
-        transform: rotate3d(0, 1, 0, 100deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(0, 1, 0, 140deg);
-        -ms-transform: rotate3d(0, 1, 0, 140deg);
-        transform: rotate3d(0, 1, 0, 140deg);
-      }
-    }
-
-    @keyframes iusdTg {
-      from {
-        -webkit-transform: rotate3d(0, 1, 0, 0deg);
-        -ms-transform: rotate3d(0, 1, 0, 0deg);
-        transform: rotate3d(0, 1, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(0, 1, 0, 170deg);
-        -ms-transform: rotate3d(0, 1, 0, 170deg);
-        transform: rotate3d(0, 1, 0, 170deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(0, 1, 0, 100deg);
-        -ms-transform: rotate3d(0, 1, 0, 100deg);
-        transform: rotate3d(0, 1, 0, 100deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(0, 1, 0, 140deg);
-        -ms-transform: rotate3d(0, 1, 0, 140deg);
-        transform: rotate3d(0, 1, 0, 140deg);
-      }
-    }
-
-    /* sc-component-id: sc-keyframes-leamKW */
-    @-webkit-keyframes leamKW {
-      from {
-        -webkit-transform: rotate3d(1, 0, 0, 0deg);
-        -ms-transform: rotate3d(1, 0, 0, 0deg);
-        transform: rotate3d(1, 0, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(1, 0, 0, 190deg);
-        -ms-transform: rotate3d(1, 0, 0, 190deg);
-        transform: rotate3d(1, 0, 0, 190deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(1, 0, 0, 130deg);
-        -ms-transform: rotate3d(1, 0, 0, 130deg);
-        transform: rotate3d(1, 0, 0, 130deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(1, 0, 0, 140deg);
-        -ms-transform: rotate3d(1, 0, 0, 140deg);
-        transform: rotate3d(1, 0, 0, 140deg);
-      }
-    }
-
-    @keyframes leamKW {
-      from {
-        -webkit-transform: rotate3d(1, 0, 0, 0deg);
-        -ms-transform: rotate3d(1, 0, 0, 0deg);
-        transform: rotate3d(1, 0, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(1, 0, 0, 190deg);
-        -ms-transform: rotate3d(1, 0, 0, 190deg);
-        transform: rotate3d(1, 0, 0, 190deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(1, 0, 0, 130deg);
-        -ms-transform: rotate3d(1, 0, 0, 130deg);
-        transform: rotate3d(1, 0, 0, 130deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(1, 0, 0, 140deg);
-        -ms-transform: rotate3d(1, 0, 0, 140deg);
-        transform: rotate3d(1, 0, 0, 140deg);
-      }
-    }
-
-    /* sc-component-id: sc-keyframes-diPYIz */
-    @-webkit-keyframes diPYIz {
-      from {
-        -webkit-transform: rotate3d(1, 0, 0, 0deg);
-        -ms-transform: rotate3d(1, 0, 0, 0deg);
-        transform: rotate3d(1, 0, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(1, 0, 0, -190deg);
-        -ms-transform: rotate3d(1, 0, 0, -190deg);
-        transform: rotate3d(1, 0, 0, -190deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(1, 0, 0, -150deg);
-        -ms-transform: rotate3d(1, 0, 0, -150deg);
-        transform: rotate3d(1, 0, 0, -150deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(1, 0, 0, -190deg);
-        -ms-transform: rotate3d(1, 0, 0, -190deg);
-        transform: rotate3d(1, 0, 0, -190deg);
-      }
-    }
-
-    @keyframes diPYIz {
-      from {
-        -webkit-transform: rotate3d(1, 0, 0, 0deg);
-        -ms-transform: rotate3d(1, 0, 0, 0deg);
-        transform: rotate3d(1, 0, 0, 0deg);
-      }
-
-      50% {
-        -webkit-transform: rotate3d(1, 0, 0, -190deg);
-        -ms-transform: rotate3d(1, 0, 0, -190deg);
-        transform: rotate3d(1, 0, 0, -190deg);
-      }
-
-      70% {
-        -webkit-transform: rotate3d(1, 0, 0, -150deg);
-        -ms-transform: rotate3d(1, 0, 0, -150deg);
-        transform: rotate3d(1, 0, 0, -150deg);
-      }
-
-      to {
-        -webkit-transform: rotate3d(1, 0, 0, -190deg);
-        -ms-transform: rotate3d(1, 0, 0, -190deg);
-        transform: rotate3d(1, 0, 0, -190deg);
-      }
-    }
-
-    #jeruk {
-      position: absolute;
-      animation: up 0.5s ease-out 0.8s forwards;
-      transform: translate(0, -100px) scale(0.5);
-
-    }
-
-    @keyframes up {
-      from {
-        transform: translate(0, -100px) scale(0.5);
-      }
-
-      to {
-        transform: translate(-50px, -400px) scale(1);
-      }
-    }
-  </style>
+  <!-- assets -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hmongouachon/mgGlitch/src/mgGlitch.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div class="loader">
+<body class="relative h-[100vh] h-[100dvh]">
+  <div class="loader" data-theme="dark">
     <p>Hai, Namaku Jeruk...</p>
-    <progress></progress>
+    <progress class="progress"></progress>
   </div>
-  <!--  Sorry for minimized classnames, I made it in React with styled-components 
-https://github.com/EminQasimov/opening-3d-box-animation
+  <div id="root" class="relative h-full">
 
-https://www.youtube.com/watch?v=KAaFjv3Ejxg
--->
-  <div id="root">
-    <div>
+
+    <div class="floating">
       <div class="sc-bdVaJa hCqOlD">
         <div class="sc-bwzfXH biqWkE">
           <div class="sc-htpNat kGQype">
@@ -608,36 +53,79 @@ https://www.youtube.com/watch?v=KAaFjv3Ejxg
         </div>
       </div>
     </div>
+    <div class="card card-body bg-base-100 fixed left-[50%] translate-x-[-50%] max-w-sm bottom-[5%] w-[80%]">
+      <div class="flex justify-between">
+        <div class="flex flex-col">
+          <h3 class="card-title">L</h3>
+          <span class="flex justify-between">Halstage</span>
+        </div>
+        <label class="swap">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" />
+
+          <!-- volume on icon -->
+          <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960"
+            width="28px" fill="#e3e3e3">
+            <path
+              d="m480-120.67-46.67-42q-104.18-95.08-172.25-164.04Q193-395.67 152.67-450.17q-40.34-54.5-56.5-99.16Q80-594 80-640q0-91.44 61.33-152.72 61.34-61.28 152-61.28 55.34 0 103.34 25.33 48 25.34 83.33 72.67 39.33-49.33 86.33-73.67 47-24.33 100.34-24.33 90.66 0 152 61.28Q880-731.44 880-640q0 46-16.17 90.67-16.16 44.66-56.5 99.16-40.33 54.5-108.41 123.46-68.07 68.96-172.25 164.04l-46.67 42Zm0-88.66q99.49-90.67 163.75-155.5Q708-429.67 745.67-478.17q37.66-48.5 52.66-86.42t15-75.31q0-64.1-41.33-105.77-41.33-41.66-105.18-41.66-50.02 0-92.59 29.83-42.56 29.83-65.56 81.5h-58q-22.34-51-64.9-81.17-42.57-30.16-92.59-30.16-63.85 0-105.18 41.66-41.33 41.67-41.33 105.88 0 37.46 15 75.62 15 38.17 52.66 87Q252-428.33 316.67-363.83q64.66 64.5 163.33 154.5Zm0-289Z" />
+          </svg>
+
+          <!-- volume off icon -->
+          <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960"
+            width="28px" fill="#e3e3e3">
+            <path
+              d="m480-120.67-46.67-42q-104.33-95-172.33-164-68-69-108.33-123.5-40.34-54.5-56.5-99.16Q80-594 80-640q0-91.33 61.33-152.67 61.34-61.33 152-61.33 55.34 0 103.34 25.33 48 25.34 83.33 72.67 39.33-49.33 86.33-73.67 47-24.33 100.34-24.33 90.66 0 152 61.33Q880-731.33 880-640q0 46-16.17 90.67-16.16 44.66-56.5 99.16Q767-395.67 699-326.67t-172.33 164l-46.67 42Z" />
+          </svg>
+          </svg>
+        </label>
+      </div>
+      <div class="flex flex-col gap-1">
+        <input type="range" min="0" max="100" value="40" class="range grow w-full range-neutral range-xs"
+          id="song_duration" />
+        <div class="flex justify-between">
+          <span id="music_current_duration">0:00</span>
+          <span id="music_total_duration">0:00</span>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <button class="btn btn-ghost btn-rounded"></button>
+        <div class="flex justify-center">
+          <label class="swap text-xl">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" id="play_button" />
+            <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
+              width="48px" fill="#e3e3e3">
+              <path
+                d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+            </svg>
+            <!-- volume off icon -->
+            <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
+              width="48px" fill="#e3e3e3">
+              <path d="M560-200v-560h160v560H560Zm-320 0v-560h160v560H240Z" />
+            </svg>
+          </label>
+        </div>
+        <label class="swap">
+          <input type="checkbox" checked id="loop_button" />
+          <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960"
+            width="32px" fill="#e3e3e3">
+            <path
+              d="m274-200 34 34q12 12 11.5 28T308-110q-12 12-28.5 12.5T251-109L148-212q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l103-103q12-12 28.5-11.5T308-370q11 12 11.5 28T308-314l-34 34h406v-120q0-17 11.5-28.5T720-440q17 0 28.5 11.5T760-400v120q0 33-23.5 56.5T680-200H274Zm412-480H280v120q0 17-11.5 28.5T240-520q-17 0-28.5-11.5T200-560v-120q0-33 23.5-56.5T280-760h406l-34-34q-12-12-11.5-28t11.5-28q12-12 28.5-12.5T709-851l103 103q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L709-589q-12 12-28.5 11.5T652-590q-11-12-11.5-28t11.5-28l34-34Z" />
+          </svg>
+          <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960"
+            width="32px" fill="#e3e3e3">
+            <path
+              d="M120-40q-33 0-56.5-23.5T40-120v-720q0-33 23.5-56.5T120-920h720q33 0 56.5 23.5T920-840v720q0 33-23.5 56.5T840-40H120Zm154-160h406q33 0 56.5-23.5T760-280v-120q0-17-11.5-28.5T720-440q-17 0-28.5 11.5T680-400v120H274l34-34q12-12 11.5-28T308-370q-12-12-28.5-12.5T251-371L148-268q-6 6-8.5 13t-2.5 15q0 8 2.5 15t8.5 13l103 103q12 12 28.5 11.5T308-110q11-12 11.5-28T308-166l-34-34Zm412-480-34 34q-12 12-11.5 28t11.5 28q12 12 28.5 12.5T709-589l103-103q6-6 8.5-13t2.5-15q0-8-2.5-15t-8.5-13L709-851q-12-12-28.5-11.5T652-850q-11 12-11.5 28t11.5 28l34 34H280q-33 0-56.5 23.5T200-680v120q0 17 11.5 28.5T240-520q17 0 28.5-11.5T280-560v-120h406Z" />
+          </svg>
+        </label>
+      </div>
+    </div>
+    <div class="relative">
+      <!-- this elem will be glitch -->
+      <img class="glitch" src="cat_2.jpg">
+    </div>
   </div>
-  <script>
-    var elem = document.getElementById("root")
-    elem.style.display = 'none'
-    const assets = document.querySelectorAll('img');
-    const progress = document.querySelector('progress')
-    progress.max = assets.length;
-    let loaded = 0;
-    assets.forEach(asset => {
-      asset.onload = () => {
-        loaded++;
-        progress.value = loaded;
-        if (loaded === assets.length) {
-          elem.style.display = 'block'
-          document.querySelector('.loader').style.display = 'none'
-        }
-      }
-      if (asset.complete) asset.onload();
-
-    });
-    //just for reloading animation ;)
-
-
-    // window.onclick = function () {
-    //   document.body.removeChild(elem)
-    //   setTimeout(function () {
-    //     document.body.prepend(elem)
-    //   }, 100)
-    // }
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
