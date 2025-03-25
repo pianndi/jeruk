@@ -572,16 +572,18 @@ progress {
 }
 
 /* glitch elem must have absolute position */
-.glitch {
-  position: absolute;
-  width: 100px;
-  height: 200px;
-  top: 0;
-  left: 0;
-  background-position: center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  opacity: 1
+@keyframes append-animate {
+	from {
+		transform: scaleY(0) translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1) translateY(0);
+		opacity: 1;
+	}
+}
+
+.new-chat {
+	transform-origin: 0 100%;
+	animation: append-animate .2s ease-in;
 }

@@ -9,7 +9,8 @@ assets.forEach(asset => {
     loaded++;
     progress.value = loaded;
     if (loaded === assets.length) {
-      //floatAnimation('.floating');
+      PowerGlitch.glitch('.glitch')
+      floatAnimation('.floating');
       elem.style.display = 'flex'
 
       document.querySelector('.loader').style.display = 'none'
@@ -18,7 +19,11 @@ assets.forEach(asset => {
   if (asset.complete) asset.onload();
 
 });
+floatAnimation('.floating-glitch-1');
+floatAnimation('.floating-glitch-2');
 const music = new Audio('song/L - Hal.mp3')
+music.currentTime = lyrics_timestamps[lyrics_timestamps.length - 1].start - 2
+music.currentTime = 16
 music.onloadeddata = function () {
   music_total_duration.innerText = formatTime(music.duration)
   song_duration.max = music.duration
@@ -31,11 +36,33 @@ song_duration.oninput = function () {
   music_current_duration.innerText = formatTime(music.currentTime)
 }
 music.ontimeupdate = function () {
-  if (music.currentTime - lasttime >= 1) {
+  if (music.currentTime - lasttime >= 0.5) {
     song_duration.value = music.currentTime
     lasttime = music.currentTime
     music_current_duration.innerText = formatTime(music.currentTime)
   }
+  lyrics_timestamps.forEach((item, i) => {
+    if (!document.querySelector(`#lyric_${i}`) && music.currentTime > item.start && music.currentTime < item.end + 1) {
+      lyrics_el.innerHTML += `
+        <div class="chat chat-end new-chat" id="lyric_${i}">
+          <div class="chat-bubble text-sm">${item.text}</div>
+        </div>
+    `
+      // setTimeout(function () {
+      //   if (document.querySelector(`#lyric_${i}`)) {
+      //     document.querySelector(`#lyric_${i}`).remove()
+      //   }
+      // }, (item.end - music.currentTime) * 1000 + 1000)
+      setTimeout(function () {
+        if (document.querySelector(`#lyric_${i}`)) {
+          document.querySelector(`#lyric_${i}`).classList.remove('new-chat')
+        }
+      }, 500)
+    } else if (document.querySelector(`#lyric_${i}`) && !(music.currentTime > item.start && music.currentTime < item.end + 1)) {
+      document.querySelector(`#lyric_${i}`).remove()
+    }
+
+  })
 
   if (music.currentTime === music.duration) {
     if (loop_button.checked == true) {
@@ -62,62 +89,66 @@ function formatTime(second) {
 }
 
 function floatAnimation(el) {
-  const tlCan = new TimelineMax({ repeat: -1 });
-  /*Can Animation*/
+  const tlCan = gsap.timeline({ repeat: -1, delay: gsap.utils.random(0, 2) });
+
   tlCan
-    //move top left
-    .to(el, 3, { y: '-=30', x: '+=20', rotation: '-=5', ease: Power1.easeInOut })
+    .to(el, 3, { y: '-=30', x: '+=20', rotation: '-=5', ease: 'power1.inOut' })
+    .to(el, 2, { y: '+=30', x: '-=20', rotation: '-=5', ease: 'power1.inOut' })
+    .to(el, 3, { y: '-=20', rotation: '+=5', ease: 'power1.inOut' })
+    .to(el, 3, { y: '+=20', rotation: '+=5', ease: 'power1.inOut' })
+    .to(el, 3, { y: '-=50', ease: 'power1.inOut' })
+    .to(el, 3, { y: '+=50', ease: 'power1.inOut' })
+    .to(el, 3, { y: '-=30', ease: 'power1.inOut' })
+    .to(el, 3, { y: '+=30', ease: 'power1.inOut' })
+    .to(el, 2, { y: '-=30', ease: 'power1.inOut' })
+    .to(el, 2, { y: '+=30', ease: 'power1.inOut' });
 
-    //move down right
-    .to(el, 2, { y: '+=30', x: '-=20', rotation: '-=5', ease: Power1.easeInOut })
-
-
-    .to(el, 3, { y: '-=20', rotation: '+=5', ease: Power1.easeInOut })
-
-    .to(el, 3, { y: '+=20', rotation: '+=5', ease: Power1.easeInOut })
-
-
-    .to(el, 3, { y: '-=50', ease: Power1.easeInOut })
-
-    .to(el, 3, { y: '+=50', ease: Power1.easeInOut })
-
-
-    .to(el, 3, { y: '-=30', ease: Power1.easeInOut })
-
-    .to(el, 3, { y: '+=30', ease: Power1.easeInOut })
-
-
-    .to(el, 2, { y: '-=30', ease: Power1.easeInOut })
-
-    .to(el, 2, { y: '+=30', ease: Power1.easeInOut })
-
-  TweenLite.to(tlCan, 27, { ease: Power1.easeInOut })
-
+  gsap.to(tlCan, { duration: 27, ease: 'power1.inOut' });
 }
-//just for reloading animation ;)
+const ctx = canvas.getContext('2d')
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const rains = [{ x: random(0, canvas.width), y: 0, size: random(10, 20) }]
+ctx.strokeStyle = 'rgba(255,255,255,0.25)'
+ctx.lineWidth = 2
+let lastTime = performance.now()
+let hujanTimer = 0;
+function draw() {
 
-$(function () {
-  $(".glitch").mgGlitch({
-    // set 'true' to stop the plugin
-    destroy: false,
-    // set 'false' to stop glitching
-    glitch: true,
-    // set 'false' to stop scaling
-    scale: true,
-    // set 'false' to stop glitch blending
-    blend: true,
-    // select blend mode type
-    blendModeType: 'hue',
-    // set min time for glitch 1 elem
-    glitch1TimeMin: 10,
-    // set max time for glitch 1 elem
-    glitch1TimeMax: 100,
-    // set min time for glitch 2 elem
-    glitch2TimeMin: 10,
-    // set max time for glitch 2 elem
-    glitch2TimeMax: 300,
-  });
-});
+  let currentTime = performance.now()
+  let deltaTime = currentTime - lastTime
+  hujanTimer += deltaTime
+  lastTime = currentTime
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  rains.forEach((rain, i) => {
+    rain.y += 2
+    ctx.beginPath()
+    ctx.moveTo(rain.x, rain.y)
+    ctx.lineTo(rain.x, rain.y - rain.size)
+    ctx.closePath()
+    ctx.stroke()
+    if (rain.y > canvas.height) {
+      rains.splice(i, 1)
+    }
+  })
+  if (hujanTimer > random(100, 2000)) {
+    hujanTimer = 0
+    rains.push({ x: random(0, canvas.width), y: 0, size: random(10, 20) })
+  }
+  requestAnimationFrame(draw)
+}
+draw()
+function random(min, max) {
+  return Math.round(min + Math.random() * (max - min))
+}
+
+const jeruk_suka = parseInt(localStorage.getItem('jeruk_suka')) == 1
+love_button.checked = jeruk_suka
+love_button.onclick = function(e){
+  localStorage.setItem('jeruk_suka', (e.target.checked ? 1 : 0))
+}
+
+//just for reloading animation ;)
 
 // window.onclick = function () {
 //   document.body.removeChild(elem)
