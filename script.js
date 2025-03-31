@@ -109,8 +109,6 @@ const ctx = canvas.getContext('2d')
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const rains = [{ x: random(0, canvas.width), y: 0, size: random(10, 20) }]
-ctx.strokeStyle = 'rgba(255,255,255,0.25)'
-ctx.lineWidth = 2
 let lastTime = performance.now()
 let hujanTimer = 0;
 function draw() {
@@ -119,6 +117,8 @@ function draw() {
   let deltaTime = currentTime - lastTime
   hujanTimer += deltaTime
   lastTime = currentTime
+  ctx.strokeStyle = 'rgba(255,255,255,0.25)'
+  ctx.lineWidth = 3
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   rains.forEach((rain, i) => {
     rain.y += 2
@@ -144,15 +144,27 @@ function random(min, max) {
 
 const jeruk_suka = parseInt(localStorage.getItem('jeruk_suka')) == 1
 love_button.checked = jeruk_suka
-love_button.onclick = function(e){
+love_button.onclick = function (e) {
   localStorage.setItem('jeruk_suka', (e.target.checked ? 1 : 0))
 }
-
-//just for reloading animation ;)
-
-// window.onclick = function () {
-//   document.body.removeChild(elem)
-//   setTimeout(function () {
-//     document.body.prepend(elem)
-//   }, 100)
-// }
+window.addEventListener('resize', function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+})
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.detail-image').forEach(el => {
+    el.addEventListener('click', () => {
+      Swal.fire({
+        imageUrl: el.src,
+        showCloseButton: true,
+        showCancelButton: false,
+        showConfirmButton: false,
+        imageAlt: 'Detail Image',
+        imageWidth: 400,
+        didOpen: () => {
+          document.querySelector(".swal2-popup").setAttribute("data-theme", "dark");
+        }
+      })
+    })
+  })
+})
