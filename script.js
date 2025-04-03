@@ -48,11 +48,6 @@ music.ontimeupdate = function () {
           <div class="chat-bubble text-sm">${item.text}</div>
         </div>
     `
-      // setTimeout(function () {
-      //   if (document.querySelector(`#lyric_${i}`)) {
-      //     document.querySelector(`#lyric_${i}`).remove()
-      //   }
-      // }, (item.end - music.currentTime) * 1000 + 1000)
       setTimeout(function () {
         if (document.querySelector(`#lyric_${i}`)) {
           document.querySelector(`#lyric_${i}`).classList.remove('new-chat')
