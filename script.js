@@ -1,3 +1,15 @@
+tippy('label:has(#love_button)', {
+  content: 'Kalau suka call me saja',
+})
+tippy('label:has(#loop_button)', {
+  content: 'Bukan tombol repost',
+})
+tippy('label:has(#play_button)', {
+  content: 'Jangan diputar nanti pusing',
+})
+
+
+gsap.registerPlugin(TextPlugin)
 var elem = document.getElementById("root")
 elem.style.display = 'none'
 const assets = document.querySelectorAll('img');
@@ -45,9 +57,18 @@ music.ontimeupdate = function () {
     if (!document.querySelector(`#lyric_${i}`) && music.currentTime > item.start && music.currentTime < item.end + 1) {
       lyrics_el.innerHTML += `
         <div class="chat chat-end new-chat" id="lyric_${i}">
-          <div class="chat-bubble text-sm">${item.text}</div>
+          <div class="chat-bubble text-sm">...</div>
         </div>
     `
+
+      gsap.
+        to(`#lyric_${i} .chat-bubble`, {
+          text: {
+            value: item.text,
+          },
+          ease: 'none',
+          duration: item?.duration || 2,
+        })
       setTimeout(function () {
         if (document.querySelector(`#lyric_${i}`)) {
           document.querySelector(`#lyric_${i}`).classList.remove('new-chat')

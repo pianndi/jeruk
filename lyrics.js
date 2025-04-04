@@ -33,16 +33,19 @@ const lyrics_timestamps = [
     text: "Selalu aku lihat belakang punggungmu",
     start: 40,
     end: 51,
+    duration: 4,
   },
   {
     text: "disaat kau lihat belakang punggung pria lain.",
     start: 45,
     end: 51,
+    duration: 4,
   },
   {
     text: "Menunggu kau menoleh dan berlari ke arahku dan memelukku",
     start: 52,
     end: 65,
+    duration: 6,
   },
   {
     text: "seerat eratnya...",
@@ -50,8 +53,13 @@ const lyrics_timestamps = [
     end: 65,
   },
   {
-    text: "Sudah aku coba untuk menghapusmu!",
+    text: "Sudah aku coba",
     start: 67.5,
+    end: 78,
+  },
+  {
+    text: "untuk menghapusmu!",
+    start: 71,
     end: 78,
   },
   {
@@ -78,16 +86,19 @@ const lyrics_timestamps = [
     text: "Selalu aku lihat belakang punggungmu",
     start: 90,
     end: 101,
+    duration: 4,
   },
   {
     text: "disaat kau lihat belakang punggung pria lain.",
     start: 96,
     end: 101,
+    duration: 5,
   },
   {
     text: "Menunggu kau menoleh dan berlari ke arahku dan memelukku",
     start: 103,
     end: 114,
+    duration: 6,
   },
   {
     text: "seerat eratnya...",
@@ -98,16 +109,19 @@ const lyrics_timestamps = [
     text: "Selalu aku lihat belakang punggungmu",
     start: 115,
     end: 126,
+    duration: 4,
   },
   {
     text: "disaat kau lihat belakang punggung pria lain.",
     start: 120.5,
     end: 126,
+    duration: 5,
   },
   {
     text: "Menunggu kau menoleh dan berlari kearah ku dan memelukku",
     start: 128,
     end: 142,
+    duration: 6,
   },
   {
     text: "seerat eratnya...",
@@ -133,6 +147,7 @@ const lyrics_timestamps = [
     text: "Ketika kau masih jadi satu satunya alasan ku menunggu",
     start: 177,
     end: 190,
+    duration: 6,
   },
   {
     text: "di lini waktu ku",
@@ -140,8 +155,13 @@ const lyrics_timestamps = [
     end: 190,
   },
   {
-    text: "Sungguh tak terasa sudah tujuh tahun",
+    text: "Sungguh tak terasa",
     start: 193,
+    end: 210,
+  },
+  {
+    text: "sudah tujuh tahun",
+    start: 196,
     end: 210,
   },
   {
@@ -150,8 +170,13 @@ const lyrics_timestamps = [
     end: 210,
   },
   {
-    text: "Hanya untuk membuatmu terkesan kepadaku.",
+    text: "Hanya untuk membuatmu",
     start: 205,
+    end: 210,
+  },
+  {
+    text: "terkesan kepadaku.",
+    start: 207,
     end: 210,
   },
   {
